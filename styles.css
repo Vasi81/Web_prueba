@@ -1,0 +1,380 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap");
+/*Reset*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/*Utilizmaos un display grid para el menu*/
+.navbar {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  align-items: center;
+  padding: 10px;
+}
+/*Posicionar logo y dar color blanco*/
+.logo {
+  margin-top: -7px;
+  margin-left: 20px;
+  color: white;
+}
+/*Utilizamos el selector para darle otro color a la "V" dentro de span*/
+.logo span {
+  color: aqua;
+}
+/*Ponemos el texto del menu a la derecha*/
+.menu {
+  grid-column: 2/7;
+  display: flex;
+  justify-content: flex-end;
+}
+
+/*Utilizamos el selector menu li con la propiedad list-style:none 
+para quitar las viñetas de las lstas del menu*/
+.menu li {
+  list-style: none;
+  display: block;
+  padding: 7px 13px;
+}
+
+/*utilizamos el selector de clase "menu" para poner en blanco todas las <a> ya que el fondo
+ es muy oscuro*/
+.menu a {
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 20px;
+}
+
+/* Añadimos la clase "active" y cambiamos de color la opcion de Home*/
+.menu .active {
+  color: aqua;
+}
+/*usamos la pseudoclase hover para la etiqueta <a> en el menu, asi conseguimos que 
+cuando pasemos el ratón encima aparezca un fondo de color, en este caso aqua*/
+.menu a:hover {
+  background: aqua;
+  color: #191c32;
+  transition: ease-in 0.4;
+}
+
+/*Establecemos las propiedades del body*/
+body {
+  background: #191c32;
+  display: grid;
+  align-items: center;
+}
+
+/*Propiedades contenedor general */
+.contenedor {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+}
+/*Contenedor lado izquierdo utilizando flex*/
+.contenedor .lado_izquierdo {
+  display: flex;
+  background: #003147;
+  padding: 40px;
+  width: 40%;
+  display: inline;
+  float: left;
+}
+/* Div texto web developer utilizando flex*/
+.perfilTexto {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+/*Div contacto*/
+.contactInfo {
+  padding-top: 40px;
+}
+.titulo {
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 600px;
+  letter-spacing: 1px;
+  margin-bottom: 20px;
+}
+/*Div imgBox*/
+.perfilTexto .imgBx {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+/*propiedades imagen*/
+.perfilTexto .imgBx img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+/*Texto bajo imagen*/
+.perfilTexto h2 {
+  color: #fff;
+  font-size: 1.5em;
+  margin-top: 20px;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 600;
+  line-height: 1.4em;
+}
+.perfilTexto h2 span {
+  font-size: 0.8em;
+  font-weight: 300;
+}
+/*Lista Contacto*/
+.contactInfo ul {
+  position: relative;
+}
+.contactInfo ul li {
+  position: relative;
+  list-style: none;
+  margin: 10px 0;
+  cursor: pointer;
+}
+/*Iconos contacto*/
+.contactInfo ul li .icono {
+  display: inline-block;
+  width: 30px;
+  font-size: 18px;
+  color: #03a9f4;
+}
+/*Texto iconos*/
+.contactInfo ul li span {
+  color: #fff;
+  font-weight: 300px;
+}
+/*Formación*/
+.contactInfo_formacion h3 {
+  margin-top: 70px;
+  padding-bottom: 50px;
+}
+/*Lista formación*/
+.contactInfo_formacion li {
+  margin-bottom: 15px;
+  list-style: none;
+}
+/*Año formación*/
+.contactInfo_formacion h5 {
+  color: #03a9f4;
+  font-weight: 500px;
+}
+/*Texto formación tipo estudios*/
+.contactInfo_formacion h4:nth-child(2) {
+  color: #fff;
+  font-weight: 500;
+}
+/*Texto formación instituto*/
+.contactInfo_formacion h4 {
+  color: #fff;
+  font-weight: 300;
+}
+/*Idiomas*/
+.contactInfo_idiomas h3 {
+  margin-top: 50px;
+}
+/*Lista idiomas utilizando flex*/
+.contactInfo_idiomas {
+  display: flex;
+  flex-direction: column;
+}
+.contactInfo_idiomas ul li {
+  list-style: none;
+  margin-top: 70px;
+}
+/*Texto idiomas*/
+.contactInfo_idiomas .text {
+  color: #fff;
+}
+/*Barra porcentaje idiomas*/
+.contactInfo_idiomas .porcentaje {
+  position: relative;
+  width: 100%;
+  height: 6px;
+  background: #081921;
+  display: block;
+  margin-top: 5px;
+}
+/*relleno porcentaje*/
+.contactInfo_idiomas .porcentaje div {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background: #03a9f4;
+}
+/*Contenedor lado derecho*/
+.contenedor .lado_derecho {
+  position: relative;
+  background: #fff;
+  padding: 40px;
+  width: 60%;
+  float: right;
+}
+.acerca_de_mi {
+  margin-bottom: 50px;
+}
+.acerca_de_mi:last-child {
+  margin-bottom: 0;
+}
+/*Texto sobre mi*/
+.titulo2 {
+  color: #003147;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+/*Texto parrafo*/
+p {
+  color: #333;
+}
+.acerca_de_mi .box {
+  margin: 20px 0;
+}
+/*Años experiencia*/
+.acerca_de_mi .box .anios {
+  min-width: 150px;
+}
+.acerca_de_mi .box .anios h5 {
+  text-transform: uppercase;
+  color: #848c90;
+  font-weight: 600;
+}
+/*Puesto trabajo*/
+.acerca_de_mi .box .texto h4 {
+  text-transform: uppercase;
+  color: #2a7da2;
+  font-size: 16px;
+}
+/*Lenguajes*/
+.habilidades .box {
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+}
+/*Texto lenguajes*/
+.habilidades .box h4 {
+  text-transform: uppercase;
+  color: #848c90;
+  font-weight: 500;
+}
+/*Barra porcentaje lenguajes*/
+.habilidades .box .porcentaje {
+  position: relative;
+  width: 100%;
+  height: 10px;
+  background: #f0f0f0;
+}
+/*Barra relleno porcentaje lenguajes*/
+.habilidades .box .porcentaje div {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background: #03a9f4;
+}
+.habilidades {
+  position: relative;
+}
+/*Propiedades de las imagenes utilizando flex*/
+.imagenes {
+  display: flex;
+  margin-top: 150px;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+.img3 {
+  width: 200px;
+}
+.img1 {
+  width: 200px;
+}
+.img2 {
+  width: 200px;
+}
+.img4 {
+  width: 200px;
+}
+.img5 {
+  margin-top: 50px;
+  width: 200px;
+}
+
+/*Pie de pagina con grid y flex*/
+
+.pie_de_pagina {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  justify-content: space-around;
+  grid-gap: 100px;
+  background-color: aqua;
+}
+
+.pie_de_pagina .box {
+  display: grid;
+  height: 200px;
+  margin: 20px 20px;
+  justify-content: start;
+}
+
+.box figure {
+  display: grid;
+  justify-content: space-evenly;
+}
+.red_social {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+/*Estilos de los iconos*/
+.pie_de_pagina .red_social a {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-decoration: none;
+  width: 45px;
+  height: 45px;
+  line-height: 45px;
+  color: #fff;
+  margin-right: 10px;
+  background-color: #0d2033;
+  text-align: center;
+  transition: all 300ms ease; /*necesario para añadir un hover*/
+  border-radius: 50px;
+}
+.pie_de_pagina .red_social a:hover {
+  color: crimson;
+}
+/*Estilos al copyright*/
+.grupo-2 {
+  background-color: #0a1a2a;
+  padding: 15px 10px;
+  text-align: center;
+  color: #fff;
+  max-height: 5px;
+  margin-bottom: 10px;
+}
+
+@media only screen and (max-width: 600px) {
+  .navbar .menu {
+    display: grid;
+    align-items: center;
+    grid-column: 3/6;
+  }
+  .logo {
+    grid-column: 2/3;
+  }
+  .red_social {
+    display: grid;
+  }
+}
